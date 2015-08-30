@@ -1,10 +1,21 @@
 <html>
 <head>
-<title>nerd</title>
+<meta charset='utf-8'>
+<title>列王的纷争情报图</title>
+<script src="raphael-min.js">
+</script>
 </head>
 <body>
-<font>
-nerd
+<font size="7">
+<!--列王的纷争情报图-->
 </font>
+<div id="holder"></div>
+<script>
+    var paper = Raphael( "holder", 800, 800 );
+    var rect = paper.rect(0,0,800,800);
+    var circle = paper.circle(300, 300, 50);  // 从200,200 开始画一个半径150的圆
+    circle.attr("fill", "#f00"); //并用红色填充
+    rect.attr("fill","#ffff");
+</script>
 </body>
 </html>
