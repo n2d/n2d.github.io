@@ -65,7 +65,7 @@ var ellipse = paper.ellipse(height-person[i].y/rat, person[i].x/rat, 35,20);
 paper.text(height-person[i].y/rat,person[i].x/rat-10,person[i].name);
 paper.text(height-person[i].y/rat,person[i].x/rat,person[i].l);
 paper.text(height-person[i].y/rat,person[i].x/rat+10,""+person[i].x+","+person[i].y);
-ellipse.attr({fill:"#ff0",opacity:0.5}); //并用红色填充
+ellipse.attr({fill:person[i].color,opacity:0.5}); //并用红色填充
 }
 }
 var rat = request("rate");
