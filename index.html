@@ -25,17 +25,38 @@ filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11
 <font size="3">
 QQ交流群:364831046
 </font>
-<p /><p /><p /><p /><p />
+<p /><p /><p /><p /><p />缩放：
+            <a href="?rate=0.5">0.5</a>
+             <a href="?rate=1">1</a> 
+             <a href="?rate=2">2</a></li>
+            <a href="?rate=3">3</a>
 <div id="holder"></div>
 <script>
+
+function request(paras){ 
+var url = location.href;  
+var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");  
+var paraObj = {}  
+for (i=0; j=paraString[i]; i++){  
+paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
+}  
+var returnValue = paraObj[paras.toLowerCase()];  
+if(typeof(returnValue)=="undefined"){  
+return "";  
+}else{  
+return returnValue;  
+}  
+}
+
+var drawmap=function(rate){
 var rwidth = 1200;
 var rheight = 1200;
-var width=1200;
-var height=1200;
+var width=rwidth*rate;
+var height=rheight*rate;
 var rat = rwidth/width;
 var paper = Raphael( "holder", width, height );
 var rect = paper.rect(0,0,width,width);
-var king = paper.rect(573,573,52,52);
+var king = paper.rect(573/rat,573/rat,52/rat,52/rat);
 rect.attr("fill","#fff");
 king.attr("fill","#c20");
 //paper.attr({rotation:45});
@@ -45,8 +66,14 @@ paper.text(height-person[i].y/rat,person[i].x/rat-10,person[i].name);
 paper.text(height-person[i].y/rat,person[i].x/rat,person[i].l);
 paper.text(height-person[i].y/rat,person[i].x/rat+10,""+person[i].x+","+person[i].y);
 ellipse.attr({fill:"#ff0",opacity:0.5}); //并用红色填充
-
 }
+}
+var rat = request("rate");
+if(rat=="")
+   rat = 1;
+if(rat > 4)
+   rat = 4;
+drawmap(rat);
 
 </script>
 
