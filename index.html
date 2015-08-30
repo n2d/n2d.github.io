@@ -4,27 +4,48 @@
 <title>列王的纷争情报图</title>
 <script src="raphael-min.js" ></script>
 <script src="data.js" ></script>
+<!--
+<style>
+
+#holder{
+padding-left:300px;
+padding-top:300px;
+transform: rotate(-40deg);
+-o-transform: rotate(-40deg);
+-webkit-transform: rotate(-40deg);
+-moz-transform: rotate(-40deg);
+filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7660444431189777, M12=-0.6427876096865394, M21=0.6427876096865398, M22=0.7660444431189779)";
+}
+</style>-->
 </head>
-<body>
+<body style="text-align:center;">
 <font size="7">
 列王的纷争405王国情报图
 </font><br />
 <font size="3">
 QQ交流群:364831046
 </font>
+<p /><p /><p /><p /><p />
 <div id="holder"></div>
 <script>
-var paper = Raphael( "holder", 1200, 1200 );
-var rect = paper.rect(0,0,1200,1200);
+var rwidth = 1200;
+var rheight = 1200;
+var width=1200;
+var height=1200;
+var rat = rwidth/width;
+var paper = Raphael( "holder", width, height );
+var rect = paper.rect(0,0,width,width);
 var king = paper.rect(573,573,52,52);
-king.attr("fill","#c20");
-for(i=person.length-1;i>=0;i--){
-var ellipse = paper.ellipse(1200-person[i].y, person[i].x, 35,20);
-paper.text(1200-person[i].y,person[i].x-10,person[i].name);
-paper.text(1200-person[i].y,person[i].x,person[i].l);
-paper.text(1200-person[i].y,person[i].x+10,""+person[i].x+","+person[i].y);
-ellipse.attr({fill:"#ff0",opacity:0.5}); //并用红色填充
 rect.attr("fill","#fff");
+king.attr("fill","#c20");
+//paper.attr({rotation:45});
+for(i=person.length-1;i>=0;i--){
+var ellipse = paper.ellipse(height-person[i].y/rat, person[i].x/rat, 35,20);
+paper.text(height-person[i].y/rat,person[i].x/rat-10,person[i].name);
+paper.text(height-person[i].y/rat,person[i].x/rat,person[i].l);
+paper.text(height-person[i].y/rat,person[i].x/rat+10,""+person[i].x+","+person[i].y);
+ellipse.attr({fill:"#ff0",opacity:0.5}); //并用红色填充
+
 }
 
 </script>
