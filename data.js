@@ -21,4 +21,5 @@ var person=[
 {name: "ZUZ",x:478,y:656,k:405,l:"中文",color:"#ff0"},
 {name: "Gar",x:228,y:1120,k:405,l:"全语言",color:"#f00"},
 {name: "Wia",x:661,y:896,k:405,l:"中文",color:"#0f0"},
+{name: "STR",x:791,y:775,k:405,l:"德语",color:"#ff0"},
 ];
