@@ -22,4 +22,12 @@ var person=[
 {name: "Gar",x:228,y:1120,k:405,l:"全语言",color:"#f00"},
 {name: "Wia",x:661,y:896,k:405,l:"中文",color:"#0f0"},
 {name: "STR",x:791,y:775,k:405,l:"德语",color:"#ff0"},
+{name: "Tro",x:609,y:710,k:405,l:"葡萄牙",color:"#ff0"},
+{name: "oRo",x:540,y:563,k:405,l:"中文",color:"#ff0"},
+{name: "Trk",x:582,y:516,k:405,l:"中文",color:"#ff0"},
+{name: "SYR",x:610,y:525,k:405,l:"英语",color:"#ff0"},
+{name: "M4l",x:673,y:545,k:405,l:"全语言",color:"#ff0"},
+{name: "IGZ",x:694,y:646,k:405,l:"中文",color:"#ff0"},
+{name: "jax",x:687,y:664,k:405,l:"日语",color:"#ff0"},
+{name: "RF3",x:730,y:480,k:405,l:"俄语",color:"#ff0"},
 ];
