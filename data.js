@@ -30,4 +30,9 @@ var person=[
 {name: "IGZ",x:694,y:646,k:405,l:"中文",color:"#ff0"},
 {name: "jax",x:687,y:664,k:405,l:"日语",color:"#ff0"},
 {name: "RF3",x:730,y:480,k:405,l:"俄语",color:"#ff0"},
+{name: "PIR",x:849,y:1005,k:405,l:"英语",color:"#ff0"},
+{name: "Wha",x:564,y:841,k:405,l:"中文",color:"#ff0"},
+{name: "KEY",x:479,y:1037,k:405,l:"中文",color:"#ff0"},
+{name: "Ril",x:306,y:573,k:405,l:"英语",color:"#ff0"},
+{name: "Gui",x:535,y:737,k:405,l:"俄语",color:"#ff0"},
 ];
