@@ -37,4 +37,12 @@ var person=[
 {name: "Gui",x:535,y:737,k:405,l:"俄语",color:"#ff0"},
 {name: "VIE",x:786,y:356,k:405,l:"越南语",color:"#f00"},
 {name: "DOG",x:857,y:1017,k:405,l:"英语",color:"#ff0"},
+
+
+
+
+
+//565王国
+{name: "ftT",x:852,y:753,k:565,l:"中文",color:"#ff0"},
+{name: "mia",x:802,y:739,k:565,l:"中文",color:"#ff0"},
 ];
