@@ -35,4 +35,6 @@ var person=[
 {name: "KEY",x:479,y:1037,k:405,l:"中文",color:"#ff0"},
 {name: "Ril",x:306,y:573,k:405,l:"英语",color:"#ff0"},
 {name: "Gui",x:535,y:737,k:405,l:"俄语",color:"#ff0"},
+{name: "VIE",x:786,y:356,k:405,l:"越南语",color:"#f00"},
+{name: "DOG",x:857,y:1017,k:405,l:"英语",color:"#ff0"},
 ];
