@@ -51,7 +51,7 @@ return returnValue;
 }  
 }
 
-var drawmap=function(rate){
+var drawmap=function(rate,kingdom){
 var rwidth = 1200;
 var rheight = 1200;
 var width=rwidth*rate;
@@ -64,6 +64,8 @@ rect.attr("fill","#fff");
 king.attr("fill","#c20");
 //paper.attr({rotation:45});
 for(i=person.length-1;i>=0;i--){
+            if(person[i].k != kingdom)
+               continue;
 var ellipse = paper.ellipse(height-person[i].y/rat, person[i].x/rat, 35,20);
 paper.text(height-person[i].y/rat,person[i].x/rat-10,person[i].name);
 paper.text(height-person[i].y/rat,person[i].x/rat,person[i].l);
@@ -72,11 +74,14 @@ ellipse.attr({fill:person[i].color,opacity:0.5}); //并用红色填充
 }
 }
 var rat = request("rate");
+var kingdom = request("kingdom");
 if(rat=="")
    rat = 1;
+if(kingdom=="")
+   kingdom = 405;
 if(rat > 4)
    rat = 4;
-drawmap(rat);
+drawmap(rat,kingdom);
 
 </script>
 
