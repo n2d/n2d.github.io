@@ -37,7 +37,7 @@ var person=[
 {name: "Gui",x:535,y:737,k:405,l:"俄语",color:"#ff0"},
 {name: "VIE",x:786,y:356,k:405,l:"越南语",color:"#f00"},
 {name: "DOG",x:857,y:1017,k:405,l:"英语",color:"#ff0"},
-
+{name: "Ono",x:235,y:668,k:405,l:"荷兰语",color:"#f00"},
 
 
 
