@@ -39,7 +39,7 @@ var person=[
 {name: "DOG",x:857,y:1017,k:405,l:"英语",color:"#ff0"},
 {name: "Ono",x:235,y:668,k:405,l:"荷兰语",color:"#f00"},
 {name: "666",x:754,y:586,k:405,l:"俄语",color:"#ff0"},
-
+{name: "PRC",x:659,y:1005,k:405,l:"中文",color:"#ff0"},
 
 
 //565王国
