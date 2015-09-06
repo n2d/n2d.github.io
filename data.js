@@ -1,7 +1,6 @@
 
 var person=[
 {name: "GOD",x:456,y:720,k:405,l:"中文",color:"#0f0"},
-{name: "GOD2",x:304,y:1112,k:405,l:"中文",color:"#0f0"},
 {name: "TWV",x:458,y:614,k:405,l:"中文",color:"#0f0"},
 {name: "BLG",x:393,y:754,k:405,l:"俄语",color:"#f00"},
 {name: "thr",x:511,y:709,k:405,l:"中文",color:"#0f0"},
