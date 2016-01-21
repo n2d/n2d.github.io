@@ -96,18 +96,18 @@
 	map.enableScrollWheelZoom();
 	map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
 	var customLayer;
-navigator.geolocation.getCurrentPosition(translatePoint); //定位
+	navigator.geolocation.getCurrentPosition(translatePoint); //定位
 
 	function translatePoint(position){
 
-	var currentLat = position.coords.latitude;
+		var currentLat = position.coords.latitude;
 
-	var currentLon = position.coords.longitude;
+		var currentLon = position.coords.longitude;
 
-	var gpsPoint = new BMap.Point(currentLon, currentLat);
+		var gpsPoint = new BMap.Point(currentLon, currentLat);
 
-	//BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标
-	map.centerAndZoom(gpsPoint, 18);  
+		//BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标
+		map.centerAndZoom(gpsPoint, 15);  
 	}
 	function addCustomLayer(keyword) {
 		if (customLayer) {
