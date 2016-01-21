@@ -117,7 +117,7 @@ navigator.geolocation.getCurrentPosition(translatePoint); //定位
 	var gpsPoint = new BMap.Point(currentLon, currentLat);
 
 	//BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标
-	map.centerAndZoom(gpsPoint, 10);  
+	map.centerAndZoom(gpsPoint, 20);  
 	}
 	function addCustomLayer(keyword) {
 		if (customLayer) {
