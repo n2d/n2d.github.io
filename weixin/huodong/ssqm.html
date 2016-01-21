@@ -106,6 +106,19 @@
 	map.enableScrollWheelZoom();
 	map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
 	var customLayer;
+navigator.geolocation.getCurrentPosition(translatePoint); //定位
+
+	function translatePoint(position){
+
+	var currentLat = position.coords.latitude;
+
+	var currentLon = position.coords.longitude;
+
+	var gpsPoint = new BMap.Point(currentLon, currentLat);
+
+	BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标
+
+	}
 	function addCustomLayer(keyword) {
 		if (customLayer) {
 			map.removeTileLayer(customLayer);
