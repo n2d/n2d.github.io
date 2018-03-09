@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset='utf-8'>
-<title>列王的纷争情报图</title>
+<title>牛耳朵网</title>
 <script src="raphael-min.js" ></script>
 <script src="data.js" ></script>
 <!--
@@ -20,76 +20,8 @@ filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11
 </head>
 <body style="text-align:center;">
 <font size="7">
-列王的纷争王国情报图
+牛耳朵网
 </font><br />
-
-<font size="3">
-QQ交流群:364831046
-</font>
-<p /><p /><p /><p /><p />
-王国: 
-<a href="?kingdom=405">405</a>
-<a href="?kingdom=565">565</a>
-<p></p>
-
-缩放：
-            <a href="?rate=0.5">0.5</a>
-             <a href="?rate=1">1</a> 
-             <a href="?rate=2">2</a>
-            <a href="?rate=3">3</a>
-<p></p>
-
-<div id="holder"></div>
-<script>
-
-function request(paras){ 
-var url = location.href;  
-var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");  
-var paraObj = {}  
-for (i=0; j=paraString[i]; i++){  
-paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
-}  
-var returnValue = paraObj[paras.toLowerCase()];  
-if(typeof(returnValue)=="undefined"){  
-return "";  
-}else{  
-return returnValue;  
-}  
-}
-
-var drawmap=function(rate,kingdom){
-var rwidth = 1200;
-var rheight = 1200;
-var width=rwidth*rate;
-var height=rheight*rate;
-var rat = rwidth/width;
-var paper = Raphael( "holder", width, height );
-var rect = paper.rect(0,0,width,width);
-var king = paper.rect(573/rat,573/rat,52/rat,52/rat);
-rect.attr("fill","#fff");
-king.attr("fill","#c20");
-//paper.attr({rotation:45});
-for(i=person.length-1;i>=0;i--){
-            if(person[i].k != kingdom)
-               continue;
-var ellipse = paper.ellipse(height-person[i].y/rat, person[i].x/rat, 35,20);
-paper.text(height-person[i].y/rat,person[i].x/rat-10,person[i].name);
-paper.text(height-person[i].y/rat,person[i].x/rat,person[i].l);
-paper.text(height-person[i].y/rat,person[i].x/rat+10,""+person[i].x+","+person[i].y);
-ellipse.attr({fill:person[i].color,opacity:0.5}); //并用红色填充
-}
-}
-var rat = request("rate");
-var kingdom = request("kingdom");
-if(rat=="")
-   rat = 1;
-if(kingdom=="")
-   kingdom = 405;
-if(rat > 4)
-   rat = 4;
-drawmap(rat,kingdom);
-
-</script>
 
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256220329'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256220329%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
