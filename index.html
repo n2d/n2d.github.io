@@ -2,7 +2,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>牛耳朵-国产linux软件列表</title>
+    <title>牛耳朵-linux国产软件列表合集</title>
     <link rel="stylesheet" href="css/element.css">
     <style>
         #app {
@@ -11,7 +11,9 @@
             border-radius: 20px;
             width: 80%;
             height: 100%;
-            margin: auto;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
             /* position: absolute; */
             top: 0;
             left: 0;
@@ -23,10 +25,10 @@
 
 <body style="text-align:center;">
     <div>
-        <img src="logo.png" style="width: 100px;height:100px;" />
-        <font size="7">
+        <img src="logo.png" style="width: 50px;height:50px;" />
+        <font size="6">
             牛耳朵
-        </font><br />
+        </font>
     </div>
 
 
@@ -45,6 +47,12 @@
             <el-table-column label="更新时间">
                 <template slot-scope="scope">
                     <span>{{scope.row.update_time}}</span>
+                </template>
+            </el-table-column>
+
+            <el-table-column label="简介">
+                <template slot-scope="scope">
+                    <span style="font-size: 12px;">{{scope.row.desc}}</span>
                 </template>
             </el-table-column>
             <el-table-column label="下载地址">
