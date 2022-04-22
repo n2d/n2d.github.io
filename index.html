@@ -1,30 +1,68 @@
 <html>
+
 <head>
-<meta charset='utf-8'>
-
-<title>牛耳朵</title>
-<script src="raphael-min.js" ></script>
-<script src="data.js" ></script>
-<!--
-<style>
-
-#holder{
-padding-left:300px;
-padding-top:300px;
-transform: rotate(-40deg);
--o-transform: rotate(-40deg);
--webkit-transform: rotate(-40deg);
--moz-transform: rotate(-40deg);
-filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7660444431189777, M12=-0.6427876096865394, M21=0.6427876096865398, M22=0.7660444431189779)";
-}
-</style>-->
+    <meta charset='utf-8'>
+    <title>牛耳朵-国产linux软件列表</title>
+    <link rel="stylesheet" href="css/element.css">
+    <style>
+        #app {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 20px;
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
 </head>
-<body style="text-align:center;">
-<img src="logo.png" />
-<font size="7">
-牛耳朵网
-</font><br />
 
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256220329'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256220329%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+<body style="text-align:center;">
+    <div>
+        <img src="logo.png" style="width: 100px;height:100px;" />
+        <font size="7">
+            牛耳朵
+        </font><br />
+    </div>
+
+
+    <div id="app">
+        <el-table :data="softlist">
+            <el-table-column label="软件名">
+                <template slot-scope="scope">
+                    <span>{{scope.row.name}}</span>
+                </template>
+            </el-table-column>
+            <el-table-column label="版本">
+                <template slot-scope="scope">
+                    <span>{{scope.row.version}}</span>
+                </template>
+            </el-table-column>
+            <el-table-column label="更新时间">
+                <template slot-scope="scope">
+                    <span>{{scope.row.update_time}}</span>
+                </template>
+            </el-table-column>
+            <el-table-column label="下载地址">
+                <template slot-scope="scope">
+                    <span><a :href="scope.row.url">下载</a></span>
+                </template>
+            </el-table-column>
+
+
+        </el-table>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/element.js"></script>
+    <script src="js/soft_list.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1256220329'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256220329%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 </body>
+
 </html>
