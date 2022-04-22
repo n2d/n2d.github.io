@@ -2,12 +2,12 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>牛耳朵-linux国产软件列表合集</title>
+    <title>牛耳朵-Linux国产软件列表合集</title>
     <link rel="stylesheet" href="css/element.css">
     <style>
         #app {
-            text-align: center;
-            background-color: #fff;
+            /* text-align: center; */
+            text-align: left;
             border-radius: 20px;
             width: 80%;
             height: 100%;
@@ -33,6 +33,9 @@
 
 
     <div id="app">
+        <div>
+            <span style="font-size: 24px;"> Linux国产软件列表合集</span>
+        </div>
         <el-table :data="softlist">
             <el-table-column label="软件名">
                 <template slot-scope="scope">
