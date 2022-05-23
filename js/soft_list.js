@@ -7,4 +7,6 @@ var linux_soft_list = [
     { name: "百度网盘", url: "https://pan.baidu.com/download", update_time: "", version: "V4.3.0", desc: "百度云盘软件" },
     { name: "百度输入法", url: "https://srf.baidu.com/site/guanwang_linux/index.html", update_time: "", version: "V1.0.0", desc: "百度输入法软件" },
     { name: "搜狗输入法", url: "https://pinyin.sogou.com/linux/?r=pinyin", update_time: "", version: "V4.0.0", desc: "搜狗输入法软件" },
+    { name: "有道云笔记", url: " https://note.youdao.com/", update_time: "", version: "", desc: "云笔记" },
+   
 ]
